@@ -4,25 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wellness for the Workplace — Adjunct EAP Services</title>
-<meta name="description" content="Wellness for the Workplace (W4TWP) provides adjunct Employee Assistance Program services that complement traditional EAP — clinically grounded, RN-led, and built for real workplace life.">
+<meta name="description" content="Wellness for the Workplace (W4TWP) provides adjunct Employee Assistance Program services that complement traditional EAP — clinically grounded, RN-led, and built for real workplace life. Healthy Employees = Healthy Profits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --teal-900: #0f2e2e;
-    --teal-800: #143d3d;
-    --teal-700: #1a4d4d;
-    --teal-100: #d8e3df;
-    --cream: #f5efe6;
-    --cream-dark: #ece4d4;
-    --gold: #c8a25b;
-    --gold-dark: #a98745;
-    --moss: #6b7d6b;
+    --navy: #0d1f3c;
+    --navy-rich: #152a52;
+    --navy-deep: #081431;
+    --gold: #c9a84c;
+    --gold-light: #e3c876;
+    --gold-dark: #a87f3a;
+    --gold-bronze: #8a6529;
+    --cream: #faf6ed;
+    --cream-dark: #f0e9d9;
+    --ivory: #fffcf5;
     --ink: #1a1a1a;
     --ink-soft: #3a3a3a;
     --ink-mute: #6b6b6b;
-    --line: rgba(15, 46, 46, 0.15);
+    --line: rgba(13, 31, 60, 0.15);
+    --line-light: rgba(13, 31, 60, 0.08);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,17 +41,15 @@
     overflow-x: hidden;
   }
 
-  /* Subtle paper grain */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(15, 46, 46, 0.04) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(13, 31, 60, 0.04) 1px, transparent 0);
     background-size: 4px 4px;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   .container {
@@ -64,12 +64,12 @@
   nav {
     position: sticky;
     top: 0;
-    background: rgba(245, 239, 230, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(250, 246, 237, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
     z-index: 100;
-    padding: 18px 0;
+    padding: 14px 0;
   }
 
   .nav-inner {
@@ -80,17 +80,27 @@
   }
 
   .logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 22px;
-    color: var(--teal-900);
-    letter-spacing: -0.02em;
-    font-variation-settings: 'opsz' 36;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
   }
 
-  .logo-mark {
+  .logo-icon {
     color: var(--gold-dark);
-    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+    line-height: 1;
+    background: linear-gradient(135deg, #8a6529 0%, #a87f3a 20%, #c9a84c 40%, #e3c876 55%, #c9a84c 75%, #a87f3a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding-bottom: 4px;
   }
 
   .nav-links {
@@ -109,10 +119,10 @@
     transition: color 0.2s ease;
   }
 
-  .nav-links a:hover { color: var(--teal-900); }
+  .nav-links a:hover { color: var(--navy); }
 
   .nav-cta {
-    background: var(--teal-900);
+    background: var(--navy);
     color: var(--cream) !important;
     padding: 10px 20px;
     border-radius: 999px;
@@ -121,19 +131,19 @@
     text-transform: uppercase;
     font-weight: 600 !important;
     transition: all 0.25s ease;
+    border: 1px solid var(--navy);
   }
 
   .nav-cta:hover {
     background: var(--gold-dark);
+    border-color: var(--gold-dark);
     color: var(--cream) !important;
     transform: translateY(-1px);
   }
 
-  .mobile-menu-btn { display: none; }
-
   /* === HERO === */
   .hero {
-    padding: 100px 0 120px;
+    padding: 90px 0 120px;
     position: relative;
   }
 
@@ -145,7 +155,7 @@
     text-transform: uppercase;
     letter-spacing: 0.18em;
     font-weight: 600;
-    color: var(--moss);
+    color: var(--gold-bronze);
     margin-bottom: 32px;
   }
 
@@ -161,7 +171,7 @@
     font-size: clamp(48px, 8vw, 96px);
     line-height: 0.95;
     font-weight: 400;
-    color: var(--teal-900);
+    color: var(--navy);
     letter-spacing: -0.03em;
     margin-bottom: 32px;
     font-variation-settings: 'opsz' 144;
@@ -169,7 +179,10 @@
 
   .hero h1 em {
     font-style: italic;
-    color: var(--gold-dark);
+    background: linear-gradient(135deg, #a87f3a 0%, #c9a84c 50%, #a87f3a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 300;
   }
 
@@ -177,8 +190,18 @@
     font-size: clamp(18px, 2vw, 22px);
     color: var(--ink-soft);
     max-width: 640px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     line-height: 1.5;
+  }
+
+  .hero-tagline {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-dark);
+    margin-bottom: 48px;
+    letter-spacing: 0.02em;
   }
 
   .hero-actions {
@@ -192,7 +215,7 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: var(--teal-900);
+    background: var(--navy);
     color: var(--cream);
     padding: 18px 32px;
     border-radius: 999px;
@@ -201,14 +224,14 @@
     font-size: 15px;
     letter-spacing: 0.02em;
     transition: all 0.3s ease;
-    border: 1px solid var(--teal-900);
+    border: 1px solid var(--navy);
   }
 
   .btn-primary:hover {
     background: var(--gold-dark);
     border-color: var(--gold-dark);
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(15, 46, 46, 0.18);
+    box-shadow: 0 12px 32px rgba(13, 31, 60, 0.25);
   }
 
   .btn-primary svg { transition: transform 0.3s ease; }
@@ -218,13 +241,13 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--teal-900);
+    color: var(--navy);
     padding: 18px 24px;
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 0.02em;
-    border-bottom: 1px solid var(--teal-900);
+    border-bottom: 1px solid var(--navy);
     transition: all 0.25s ease;
   }
 
@@ -234,7 +257,6 @@
     padding-left: 32px;
   }
 
-  /* Editorial mark — large serif W4 in background */
   .hero-watermark {
     position: absolute;
     right: -40px;
@@ -243,8 +265,8 @@
     font-family: 'Fraunces', serif;
     font-size: clamp(220px, 32vw, 420px);
     font-weight: 300;
-    color: var(--teal-700);
-    opacity: 0.07;
+    color: var(--navy);
+    opacity: 0.05;
     line-height: 1;
     font-style: italic;
     pointer-events: none;
@@ -253,10 +275,7 @@
   }
 
   /* === SECTION SHARED === */
-  section {
-    padding: 100px 0;
-    position: relative;
-  }
+  section { padding: 100px 0; position: relative; }
 
   .section-eyebrow {
     display: flex;
@@ -264,7 +283,7 @@
     gap: 16px;
     font-family: 'Fraunces', serif;
     font-size: 14px;
-    color: var(--moss);
+    color: var(--gold-bronze);
     margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -282,7 +301,7 @@
     font-size: clamp(36px, 5vw, 56px);
     line-height: 1.05;
     font-weight: 400;
-    color: var(--teal-900);
+    color: var(--navy);
     letter-spacing: -0.02em;
     margin-bottom: 24px;
     font-variation-settings: 'opsz' 96;
@@ -291,7 +310,10 @@
 
   .section-title em {
     font-style: italic;
-    color: var(--gold-dark);
+    background: linear-gradient(135deg, #a87f3a 0%, #c9a84c 50%, #a87f3a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .section-intro {
@@ -302,18 +324,35 @@
     line-height: 1.5;
   }
 
-  /* === PROBLEM SECTION === */
+  /* === PROBLEM SECTION (NAVY) === */
   .problem {
-    background: var(--teal-900);
+    background: var(--navy);
     color: var(--cream);
     padding: 120px 0;
     margin: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .problem::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at top right, rgba(201, 168, 76, 0.08), transparent 60%),
+      radial-gradient(ellipse at bottom left, rgba(201, 168, 76, 0.05), transparent 60%);
+    pointer-events: none;
   }
 
   .problem .section-eyebrow { color: var(--gold); }
   .problem .section-num { color: var(--gold); }
   .problem .section-title { color: var(--cream); }
-  .problem .section-title em { color: var(--gold); }
+  .problem .section-title em {
+    background: linear-gradient(135deg, #c9a84c 0%, #e3c876 50%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .problem-grid {
     display: grid;
@@ -325,7 +364,7 @@
 
   .problem-text p {
     font-size: 18px;
-    color: rgba(245, 239, 230, 0.85);
+    color: rgba(250, 246, 237, 0.85);
     margin-bottom: 20px;
     line-height: 1.65;
   }
@@ -341,14 +380,10 @@
     margin-top: 32px;
   }
 
-  .stat-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
+  .stat-stack { display: flex; flex-direction: column; gap: 32px; }
 
   .stat {
-    border-top: 1px solid rgba(245, 239, 230, 0.2);
+    border-top: 1px solid rgba(250, 246, 237, 0.2);
     padding-top: 24px;
   }
 
@@ -356,7 +391,10 @@
     font-family: 'Fraunces', serif;
     font-size: 64px;
     font-weight: 300;
-    color: var(--gold);
+    background: linear-gradient(135deg, #c9a84c 0%, #e3c876 50%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1;
     letter-spacing: -0.03em;
     margin-bottom: 8px;
@@ -365,15 +403,12 @@
 
   .stat-label {
     font-size: 15px;
-    color: rgba(245, 239, 230, 0.75);
+    color: rgba(250, 246, 237, 0.75);
     line-height: 1.5;
   }
 
   /* === PROGRAMS === */
-  .programs-list {
-    display: flex;
-    flex-direction: column;
-  }
+  .programs-list { display: flex; flex-direction: column; }
 
   .program {
     display: grid;
@@ -382,7 +417,7 @@
     padding: 36px 0;
     border-top: 1px solid var(--line);
     align-items: baseline;
-    transition: background 0.3s ease, padding-left 0.3s ease;
+    transition: background 0.3s ease, padding 0.3s ease;
   }
 
   .program:last-child { border-bottom: 1px solid var(--line); }
@@ -404,7 +439,7 @@
   .program-title {
     font-family: 'Fraunces', serif;
     font-size: 26px;
-    color: var(--teal-900);
+    color: var(--navy);
     letter-spacing: -0.01em;
     line-height: 1.15;
     font-weight: 500;
@@ -431,7 +466,7 @@
   }
 
   .pillar {
-    border-top: 2px solid var(--teal-900);
+    border-top: 2px solid var(--navy);
     padding-top: 28px;
   }
 
@@ -447,7 +482,7 @@
   .pillar h3 {
     font-family: 'Fraunces', serif;
     font-size: 26px;
-    color: var(--teal-900);
+    color: var(--navy);
     margin-bottom: 16px;
     line-height: 1.15;
     font-weight: 500;
@@ -469,11 +504,12 @@
   }
 
   .about-card {
-    background: var(--cream-dark);
+    background: var(--ivory);
     border: 1px solid var(--line);
     padding: 48px;
     border-radius: 4px;
     position: relative;
+    box-shadow: 0 4px 20px rgba(13, 31, 60, 0.04);
   }
 
   .about-card::before {
@@ -486,13 +522,13 @@
     color: var(--gold);
     line-height: 1;
     font-style: italic;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 
   .about-quote {
     font-family: 'Fraunces', serif;
     font-size: 22px;
-    color: var(--teal-900);
+    color: var(--navy);
     line-height: 1.4;
     margin: 24px 0 32px;
     font-style: italic;
@@ -500,18 +536,11 @@
   }
 
   .about-attribution {
-    display: flex;
-    align-items: center;
-    gap: 16px;
     border-top: 1px solid var(--line);
     padding-top: 24px;
   }
 
-  .attribution-name {
-    font-weight: 600;
-    color: var(--teal-900);
-    font-size: 16px;
-  }
+  .attribution-name { font-weight: 600; color: var(--navy); font-size: 16px; }
 
   .attribution-title {
     font-size: 13px;
@@ -521,11 +550,7 @@
     margin-top: 4px;
   }
 
-  .credentials {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
+  .credentials { display: flex; flex-direction: column; gap: 24px; }
 
   .credential {
     display: flex;
@@ -553,16 +578,66 @@
   }
 
   .credential-text strong {
-    color: var(--teal-900);
+    color: var(--navy);
     font-weight: 600;
+  }
+
+  /* === TAGLINE BANNER === */
+  .tagline-banner {
+    background: var(--navy-deep);
+    padding: 64px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  }
+
+  .tagline-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+
+  .tagline-banner p {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #a87f3a 0%, #c9a84c 30%, #e3c876 50%, #c9a84c 70%, #a87f3a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+
+  .tagline-banner p .equals {
+    display: inline-block;
+    margin: 0 0.4em;
+    font-style: italic;
+    font-weight: 400;
   }
 
   /* === CONTACT === */
   .contact {
-    background: var(--teal-900);
+    background: var(--navy);
     color: var(--cream);
     padding: 120px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top, rgba(201, 168, 76, 0.1), transparent 60%);
+    pointer-events: none;
   }
 
   .contact h2 {
@@ -578,15 +653,19 @@
 
   .contact h2 em {
     font-style: italic;
-    color: var(--gold);
+    background: linear-gradient(135deg, #c9a84c 0%, #e3c876 50%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .contact p {
     font-size: 19px;
-    color: rgba(245, 239, 230, 0.85);
+    color: rgba(250, 246, 237, 0.85);
     max-width: 560px;
     margin: 0 auto 48px;
     line-height: 1.55;
+    position: relative;
   }
 
   .contact-actions {
@@ -594,38 +673,35 @@
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
   }
 
-  .btn-gold {
-    background: var(--gold);
-    color: var(--teal-900);
-    border-color: var(--gold);
-  }
+  .btn-gold { background: var(--gold); color: var(--navy); border-color: var(--gold); }
 
   .btn-gold:hover {
-    background: var(--cream);
-    border-color: var(--cream);
-    color: var(--teal-900);
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    color: var(--navy);
   }
 
   .btn-outline {
     background: transparent;
     color: var(--cream);
-    border: 1px solid rgba(245, 239, 230, 0.3);
+    border: 1px solid rgba(250, 246, 237, 0.3);
   }
 
   .btn-outline:hover {
-    background: rgba(245, 239, 230, 0.1);
+    background: rgba(250, 246, 237, 0.1);
     border-color: var(--cream);
     color: var(--cream);
   }
 
   /* === FOOTER === */
   footer {
-    background: var(--teal-900);
-    color: rgba(245, 239, 230, 0.6);
-    padding: 48px 0 32px;
-    border-top: 1px solid rgba(245, 239, 230, 0.1);
+    background: var(--navy-deep);
+    color: rgba(250, 246, 237, 0.6);
+    padding: 56px 0 32px;
+    border-top: 1px solid rgba(250, 246, 237, 0.08);
     font-size: 13px;
   }
 
@@ -638,25 +714,29 @@
   }
 
   .footer-mark {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 16px;
-    color: var(--gold);
+    font-family: 'Allura', cursive;
+    font-size: 24px;
+    background: linear-gradient(135deg, #a87f3a 0%, #c9a84c 50%, #a87f3a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
   }
+
+  .footer-inner a { color: rgba(250, 246, 237, 0.7); text-decoration: none; }
+  .footer-inner a:hover { color: var(--gold); }
 
   /* === RESPONSIVE === */
   @media (max-width: 900px) {
     .container { padding: 0 24px; }
     .nav-links { gap: 20px; }
     .nav-links a:not(.nav-cta) { display: none; }
+    .logo-text { font-size: 26px; }
     .hero { padding: 60px 0 80px; }
     .problem-grid { grid-template-columns: 1fr; gap: 48px; }
     .approach-grid { grid-template-columns: 1fr; gap: 32px; }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
-    .program {
-      grid-template-columns: 60px 1fr;
-      gap: 24px;
-    }
+    .program { grid-template-columns: 60px 1fr; gap: 24px; }
     .program-desc { grid-column: 2 / -1; }
     section { padding: 64px 0; }
     .problem, .approach, .contact { padding: 80px 0; }
@@ -668,9 +748,10 @@
     .btn-primary, .btn-secondary { justify-content: center; text-align: center; }
     .hero-watermark { font-size: 200px; right: -60px; }
     .about-card { padding: 32px 24px; }
+    .footer-inner { flex-direction: column; text-align: center; }
   }
 
-  /* === ENTRY ANIMATIONS === */
+  /* === ANIMATIONS === */
   .fade-up {
     opacity: 0;
     transform: translateY(24px);
@@ -680,13 +761,9 @@
   .fade-up.delay-1 { animation-delay: 0.15s; }
   .fade-up.delay-2 { animation-delay: 0.3s; }
   .fade-up.delay-3 { animation-delay: 0.45s; }
-  .fade-up.delay-4 { animation-delay: 0.6s; }
 
   @keyframes fadeUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
@@ -694,9 +771,22 @@
 
 <nav>
   <div class="container nav-inner">
-    <div class="logo">
-      Wellness <span class="logo-mark">for the</span> Workplace
-    </div>
+    <a href="#" class="logo">
+      <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="3" y="14" width="5" height="16" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="9" y="8" width="6" height="22" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="16" y="4" width="7" height="26" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="24" y="11" width="5" height="19" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1"/>
+        <line x1="11" y1="17" x2="13" y2="17" stroke="currentColor" stroke-width="1"/>
+        <line x1="11" y1="21" x2="13" y2="21" stroke="currentColor" stroke-width="1"/>
+        <line x1="18" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1"/>
+        <line x1="18" y1="13" x2="21" y2="13" stroke="currentColor" stroke-width="1"/>
+        <line x1="18" y1="17" x2="21" y2="17" stroke="currentColor" stroke-width="1"/>
+        <line x1="18" y1="21" x2="21" y2="21" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <span class="logo-text">Wellness for the Workplace</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#what-we-do">What We Do</a></li>
       <li><a href="#how-we-work">How We Work</a></li>
@@ -719,6 +809,7 @@
       Traditional Employee Assistance Programs cover crisis. They miss the daily friction that quietly drains your workforce — the missed shift because childcare fell through, the headache that became three sick days, the wellness benefit no one knows how to use.
       Wellness for the Workplace fills that gap.
     </p>
+    <div class="hero-tagline fade-up delay-2">— Healthy Employees = Healthy Profits.</div>
     <div class="hero-actions fade-up delay-3">
       <a href="https://portal.w4twp.com" class="btn-primary" target="_blank" rel="noopener">
         Access Demo Portal
@@ -738,20 +829,12 @@
       <span>The Gap We Fill</span>
     </div>
     <h2 class="section-title">EAP solves <em>crisis.</em> We solve the<br>days in between.</h2>
-
     <div class="problem-grid">
       <div class="problem-text">
-        <p>
-          Every employer in America offers an Employee Assistance Program. Most employees don't use it. The reasons are predictable — stigma, awareness, accessibility, and the simple fact that traditional EAPs are built for acute mental health crisis, not the ordinary attrition of working life.
-        </p>
-        <p>
-          What gets missed: the periods that arrive without supplies, the toddler home with a fever, the night-shift worker rebuilding circadian rhythm, the wellness incentive that never gets redeemed because no one explained how.
-        </p>
-        <p>
-          These are not crises. They are predictable, recurring, addressable. And they are quietly costing organizations more than the EAP line item itself.
-        </p>
+        <p>Every employer in America offers an Employee Assistance Program. Most employees don't use it. The reasons are predictable — stigma, awareness, accessibility, and the simple fact that traditional EAPs are built for acute mental health crisis, not the ordinary attrition of working life.</p>
+        <p>What gets missed: the periods that arrive without supplies, the toddler home with a fever, the night-shift worker rebuilding circadian rhythm, the wellness incentive that never gets redeemed because no one explained how.</p>
+        <p>These are not crises. They are predictable, recurring, addressable. And they are quietly costing organizations more than the EAP line item itself.</p>
       </div>
-
       <div class="stat-stack">
         <div class="stat">
           <div class="stat-num">3–6%</div>
@@ -780,50 +863,42 @@
     <p class="section-intro">
       Each W4TWP service is designed to sit alongside your existing benefits stack. We complement traditional EAP, primary care, and HR programs by addressing the practical, daily friction points that erode wellbeing and productivity before they ever rise to the level of crisis.
     </p>
-
     <div class="programs-list">
       <div class="program">
         <div class="program-num">01</div>
         <div class="program-title">Mental Health Toolkit</div>
         <div class="program-desc">Self-guided, evidence-based mental wellness resources employees can access without an appointment, a referral, or a stigma threshold. Built around the <strong>4Ps of Wellness</strong> framework — Physical, Psychological, Psychosocial, Professional.</div>
       </div>
-
       <div class="program">
         <div class="program-num">02</div>
         <div class="program-title">F.I.R.E. → A.S.H.</div>
         <div class="program-desc">A proprietary stress-decompression methodology that helps employees move from acute activation (Frustration, Irritation, Rage, Exhaustion) to grounded recovery (Awareness, Stillness, Healing). Delivered through workshops, digital tools, and on-demand resources.</div>
       </div>
-
       <div class="program">
         <div class="program-num">03</div>
         <div class="program-title">5 Wellness Strategies</div>
         <div class="program-desc">A structured framework for organizational wellness planning that gives HR and Corporate Wellness leaders a defensible, evidence-based architecture instead of a scattered benefits menu.</div>
       </div>
-
       <div class="program">
         <div class="program-num">04</div>
         <div class="program-title">Wellness Kits</div>
         <div class="program-desc">Tangible, employee-distributed kits containing curated essentials — blood pressure monitor, thermometer, pulse oximeter, pill organizer, hot/cold pack, OTC medications, hygiene items, stretch band, water bottle, portable fan, and a discreet carrying tote — with educational guidance.</div>
       </div>
-
       <div class="program">
         <div class="program-num">05</div>
         <div class="program-title">Feminine Hygiene & Menopause Support</div>
         <div class="program-desc">Period poverty solutions, free in-restroom feminine hygiene programs, monthly coupon partnerships, and structured menopause workplace accommodations and education. Implementation guidance for any size organization.</div>
       </div>
-
       <div class="program">
         <div class="program-num">06</div>
         <div class="program-title">Childcare Shuttle & Sick-Child Daycare</div>
         <div class="program-desc">Coordinated childcare logistics that address two of the most underestimated drivers of unplanned absence: the daily commute and the sick-child day. Reduces absenteeism without expanding internal HR scope.</div>
       </div>
-
       <div class="program">
         <div class="program-num">07</div>
         <div class="program-title">Wake-to-Work Programs</div>
         <div class="program-desc">Structured onboarding and circadian support for shift workers, night-shift staff, and emergency responders. Bridges the gap between "you're hired" and sustainable performance.</div>
       </div>
-
       <div class="program">
         <div class="program-num">08</div>
         <div class="program-title">Workshops & Training</div>
@@ -832,6 +907,12 @@
     </div>
   </div>
 </section>
+
+<div class="tagline-banner">
+  <div class="container">
+    <p>Healthy Employees <span class="equals">=</span> Healthy Profits</p>
+  </div>
+</div>
 
 <section id="how-we-work" class="approach">
   <div class="container">
@@ -843,30 +924,21 @@
     <p class="section-intro">
       W4TWP is built on a clinical foundation — but designed for the realities of HR operations, procurement cycles, and cross-functional rollout. We don't sell software. We deliver programs that fit how your organization already works.
     </p>
-
     <div class="approach-grid">
       <div class="pillar">
         <div class="pillar-num">i.</div>
         <h3>RN-Led & Evidence-Based</h3>
-        <p>
-          Every program is designed and overseen by a registered nurse with 15+ years of clinical care management experience. Our frameworks — the 4Ps of Wellness, the 10-Vs of Care Management — are built on bedside reality, not vendor marketing.
-        </p>
+        <p>Every program is designed and overseen by a registered nurse with 15+ years of clinical care management experience. Our frameworks — the 4Ps of Wellness, the 10-Vs of Care Management — are built on bedside reality, not vendor marketing.</p>
       </div>
-
       <div class="pillar">
         <div class="pillar-num">ii.</div>
         <h3>Adjunct, Not Replacement</h3>
-        <p>
-          We complement your EAP, your benefits broker, and your existing wellness vendor stack. We do not require you to displace a single existing contract. Our scope is intentionally drawn to fill the gaps, not duplicate the room.
-        </p>
+        <p>We complement your EAP, your benefits broker, and your existing wellness vendor stack. We do not require you to displace a single existing contract. Our scope is intentionally drawn to fill the gaps, not duplicate the room.</p>
       </div>
-
       <div class="pillar">
         <div class="pillar-num">iii.</div>
         <h3>Implementation-First</h3>
-        <p>
-          Every offering ships with a defined implementation path — procurement language, rollout timeline, communication templates, and measurement criteria. You get a program, not a pitch deck.
-        </p>
+        <p>Every offering ships with a defined implementation path — procurement language, rollout timeline, communication templates, and measurement criteria. You get a program, not a pitch deck.</p>
       </div>
     </div>
   </div>
@@ -879,20 +951,16 @@
       <span>About</span>
     </div>
     <h2 class="section-title">Built by a clinician who watched the <em>same gaps</em> repeat for fifteen years.</h2>
-
     <div class="about-grid">
       <div class="about-card">
         <p class="about-quote">
           The same friction shows up in every workplace I've worked with — and it's almost never what the EAP brochure addresses. W4TWP is the program I wish every HR director had on speed dial.
         </p>
         <div class="about-attribution">
-          <div>
-            <div class="attribution-name">Traci Johnson, BSN RN CCM</div>
-            <div class="attribution-title">Founder, Wellness for the Workplace</div>
-          </div>
+          <div class="attribution-name">Traci Johnson, BSN RN CCM</div>
+          <div class="attribution-title">Founder, Wellness for the Workplace</div>
         </div>
       </div>
-
       <div class="credentials">
         <div class="credential">
           <div class="credential-marker">i.</div>
@@ -947,7 +1015,7 @@
       &nbsp;&nbsp;©&nbsp;<span id="year">2026</span> &nbsp;·&nbsp; All rights reserved
     </div>
     <div>
-      Adjunct EAP Services &nbsp;·&nbsp; <a href="mailto:info@w4twp.com" style="color: rgba(245,239,230,0.7); text-decoration: none;">info@w4twp.com</a>
+      Adjunct EAP Services &nbsp;·&nbsp; <a href="mailto:info@w4twp.com">info@w4twp.com</a>
     </div>
   </div>
 </footer>
