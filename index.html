@@ -103,28 +103,21 @@
   .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
     text-decoration: none;
   }
 
-  .logo-icon {
-    flex-shrink: 0;
+  .logo img {
+    height: 38px;
+    width: auto;
+    display: block;
   }
 
-  .logo-icon * {
-    stroke: url(#goldGrad);
-  }
-
-  .logo-text {
-    font-family: 'Allura', cursive;
-    font-size: 30px;
-    line-height: 1;
-    background: linear-gradient(135deg, #8a6529 0%, #a87f3a 18%, #c9a84c 38%, #e3c876 52%, #c9a84c 70%, #a87f3a 88%, #8a6529 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    padding-bottom: 4px;
+  .hero-logo {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 48px;
+    display: block;
   }
 
   .nav-links {
@@ -758,14 +751,10 @@
     gap: 24px;
   }
 
-  .footer-mark {
-    font-family: 'Allura', cursive;
-    font-size: 26px;
-    background: linear-gradient(135deg, #a87f3a 0%, #c9a84c 50%, #a87f3a 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1;
+  .footer-mark img {
+    height: 38px;
+    width: auto;
+    display: block;
   }
 
   .footer-inner a { color: var(--cream-soft); text-decoration: none; }
@@ -831,7 +820,7 @@
 <nav>
   <div class="container nav-inner">
     <a href="#" class="logo">
-      <span class="logo-text">Wellness for the Workplace</span>
+      <img src="logo-script.png" alt="Wellness for the Workplace">
     </a>
     <ul class="nav-links">
       <li><a href="#what-we-do">What We Do</a></li>
@@ -845,17 +834,17 @@
 <header class="hero">
   <div class="hero-watermark">W4</div>
   <div class="container">
-    <div class="hero-eyebrow fade-up">Adjunct EAP Services</div>
-    <h1 class="fade-up delay-1">
+    <img src="logo-full.png" alt="Wellness for the Workplace - Healthy Employees = Healthy Profits" class="hero-logo fade-up">
+    <div class="hero-eyebrow fade-up delay-1">Adjunct EAP Services</div>
+    <h1 class="fade-up delay-2">
       Workplace wellness<br>
       that <em>actually</em> meets<br>
       people where they are.
     </h1>
-    <p class="hero-lede fade-up delay-2">
+    <p class="hero-lede fade-up delay-3">
       Traditional Employee Assistance Programs cover crisis. They miss the daily friction that quietly drains your workforce — the missed shift because childcare fell through, the headache that became three sick days, the wellness benefit no one knows how to use.
       Wellness for the Workplace fills that gap.
     </p>
-    <div class="hero-tagline fade-up delay-2">Healthy Employees = Healthy Profits</div>
     <div class="hero-actions fade-up delay-3">
       <a href="https://portal.w4twp.com" class="btn-primary" target="_blank" rel="noopener">
         Access Demo Portal
@@ -1056,12 +1045,11 @@
 
 <footer>
   <div class="container footer-inner">
-    <div>
-      <span class="footer-mark">Wellness for the Workplace</span>
-      &nbsp;&nbsp;©&nbsp;<span id="year">2026</span> &nbsp;·&nbsp; All rights reserved
+    <div class="footer-mark">
+      <img src="logo-script.png" alt="Wellness for the Workplace">
     </div>
     <div>
-      Adjunct EAP Services &nbsp;·&nbsp; <a href="mailto:info@w4twp.com">info@w4twp.com</a>
+      &copy; <span id="year">2026</span> &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; <a href="mailto:info@w4twp.com">info@w4twp.com</a>
     </div>
   </div>
 </footer>
